@@ -19,7 +19,7 @@ The core of this project is the synergy between classical machine learning (**Sc
 *   **Interactive Web Application:** Development of a user-friendly and responsive interface using **Streamlit**.
 *   **Secure API Key Management:** Industry-standard use of `.env` files and `python-dotenv` for local development.
 *   **Automated Machine Learning:** A pipeline that automatically prepares data, trains a `RandomForestClassifier` model, and evaluates its performance using **Scikit-learn**.
-*   **Generative AI Integration:** Practical application of a large language model (**Google Gemini 1.5 Pro**) to translate complex model metrics into clear, non-technical language and generate strategic business recommendations.
+*   **Generative AI Integration:** Practical application of a large language model (**Google Gemini 2.5 Pro**) to translate complex model metrics into clear, non-technical language and generate strategic business recommendations.
 *   **End-to-End Workflow:** Demonstrates the complete process from raw CSV data upload to the final delivery of AI-powered insights, showcasing skills in building a full-fledged data product.
 
 ## Model Performance & Insights
