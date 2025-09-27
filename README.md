@@ -69,10 +69,10 @@ This showcase walks through the user's journey from a blank canvas to actionable
 
 | 1. Initial State                                       | 2. Data Uploaded & Previewed                               |
 | :----------------------------------------------------- | :--------------------------------------------------------- |
-| ![Initial State](images/app_screenshot.png)         | ![Data Uploaded](images/app_screenshot_1.png)              |
+| ![Initial State](images/app_screenshot_0.png)         | ![Data Uploaded](images/app_screenshot_11.png)              |
 | *The user is greeted with a clean interface, ready to upload their dataset.* | *After uploading a CSV file, the app displays a data preview and summary statistics.* |
 
 | 3. Model Trained & Evaluated                           | 4. AI-Powered Insights Generated                             |
 | :----------------------------------------------------- | :--------------------------------------------------------- |
-| ![Model Trained](images/app_screenshot_2.png)          | ![AI Insights Generated](images/app_screenshot_3.png) |
+| ![Model Trained](images/app_screenshot_12.png)          | ![AI Insights Generated](images/app_screenshot_13.png) |
 | *The user trains a model and instantly sees its performance via a classification report and confusion matrix.* | *Finally, Gemini generates a human-readable report, explaining the model's results and offering business advice.* |
