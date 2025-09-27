@@ -35,7 +35,7 @@ def generate_insights(report: dict, column_names: list, target_column: str):
     """
     try:
         # Use the latest powerful model available through the API
-        model = genai.GenerativeModel('gemini-1.5-pro-latest')
+        model = genai.GenerativeModel('gemini-2.5-pro')
         response = model.generate_content(prompt)
         return response.text
     except Exception as e:
