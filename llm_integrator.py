@@ -2,19 +2,27 @@
 import google.generativeai as genai
 import os
 import json
+import streamlit as st # Upewnij się, że ten import jest na górze
 
 def generate_insights(report: dict, column_names: list, target_column: str):
     """
     Generates business insights from model results using the Gemini 1.5 Pro model.
     """
     try:
-        # Configure the API key from environment variables for security
-        api_key = os.getenv("GOOGLE_API_KEY")
+        # This logic checks for the key in Streamlit's secrets first (for cloud deployment),
+        # then falls back to .env for local development.
+        if 'google_genai' in st.secrets:
+            api_key = st.secrets["google_genai"]["api_key"]
+        else:
+            api_key = os.getenv("GOOGLE_API_KEY")
+
         if not api_key:
-            return "### Configuration Error\n**Google AI API key not found.** Please set the `GOOGLE_API_KEY` in your `.env` file."
+            raise ValueError("Google AI API key not found. Please set it in Streamlit secrets or your .env file.")
+        
         genai.configure(api_key=api_key)
+
     except Exception as e:
-        return f"### API Key Configuration Error\nDetails: {e}"
+        return f"### Configuration Error\nAn error occurred while configuring the API key: {e}"
 
     prompt = f"""
     You are a data science expert. Your task is to interpret the results of a machine learning model and present the findings in an accessible, business-friendly manner.
@@ -34,7 +42,6 @@ def generate_insights(report: dict, column_names: list, target_column: str):
     Present your response in elegant Markdown format, using headers and lists.
     """
     try:
-        # Use the latest powerful model available through the API
         model = genai.GenerativeModel('gemini-2.5-pro')
         response = model.generate_content(prompt)
         return response.text
