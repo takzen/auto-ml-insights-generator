@@ -65,12 +65,6 @@ The key deliverable of this application is a dynamic, **AI-generated narrative**
 
 ## Application Showcase
 
-![App Screenshot](images/app_screenshot.png)
-
-*The application interface, showing the model performance metrics alongside the AI-generated insights.*
-
-## 🖼️ Application Showcase
-
 This showcase walks through the user's journey from a blank canvas to actionable, AI-driven insights.
 
 | 1. Initial State                                       | 2. Data Uploaded & Previewed                               |
