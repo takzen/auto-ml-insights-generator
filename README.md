@@ -18,40 +18,44 @@ The core of this project is the synergy between classical machine learning (**Sc
 
 ## 💡 Key Features
 
-*   **Interactive Web Application:** Development of a user-friendly and responsive interface using **Streamlit**.
-*   **Secure API Key Management:** Industry-standard use of `.env` files and `python-dotenv` for local development.
-*   **Automated Machine Learning:** A pipeline that automatically prepares data, trains a `RandomForestClassifier` model, and evaluates its performance using **Scikit-learn**.
-*   **Generative AI Integration:** Practical application of a large language model (**Google Gemini 2.5 Pro**) to translate complex model metrics into clear, non-technical language and generate strategic business recommendations.
-*   **End-to-End Workflow:** Demonstrates the complete process from raw CSV data upload to the final delivery of AI-powered insights, showcasing skills in building a full-fledged data product.
+- **Interactive Web Application:** Development of a user-friendly and responsive interface using **Streamlit**.
+- **Secure API Key Management:** Industry-standard use of `.env` files and `python-dotenv` for local development.
+- **Automated Machine Learning:** A pipeline that automatically prepares data, trains a `RandomForestClassifier` model, and evaluates its performance using **Scikit-learn**.
+- **Generative AI Integration:** Practical application of a large language model (**Google Gemini 2.5 Pro**) to translate complex model metrics into clear, non-technical language and generate strategic business recommendations.
+- **End-to-End Workflow:** Demonstrates the complete process from raw CSV data upload to the final delivery of AI-powered insights, showcasing skills in building a full-fledged data product.
 
 ## 🛠️ How to Run
 
 1.  **Clone the repository:**
+
     ```bash
     git clone https://github.com/takzen/auto-ml-insights-generator.git
     cd auto-ml-insights-generator
     ```
 
 2.  **Create a virtual environment and install dependencies:**
-    *   This project requires Python 3.9+. Create a virtual environment using `uv`:
-        ```bash
-        uv venv
-        source .venv/bin/activate # or .venv\Scripts\activate on Windows
-        ```
-    *   Install the required packages using the single command:
-        ```bash
-        uv pip install streamlit pandas python-dotenv scikit-learn matplotlib seaborn google-generativeai
-        ```
+
+    - This project requires Python 3.9+. Create a virtual environment using `uv`:
+      ```bash
+      uv venv
+      source .venv/bin/activate # or .venv\Scripts\activate on Windows
+      ```
+    - Install the required packages using the single command:
+      ```bash
+      uv pip install streamlit pandas python-dotenv scikit-learn matplotlib seaborn google-generativeai
+      ```
 
 3.  **Set up your Google AI API Key:**
-    *   Create a file named `.env` in the root of the project.
-    *   Add your Google AI API key to this file:
-        ```
-        GOOGLE_API_KEY="YOUR_API_KEY_HERE"
-        ```
-    *   The `.gitignore` file is configured to prevent this file from being committed.
+
+    - Create a file named `.env` in the root of the project.
+    - Add your Google AI API key to this file:
+      ```
+      GOOGLE_API_KEY="YOUR_API_KEY_HERE"
+      ```
+    - The `.gitignore` file is configured to prevent this file from being committed.
 
 4.  **Run the Streamlit application:**
+
     ```bash
     streamlit run app.py
     ```
@@ -62,12 +66,12 @@ The core of this project is the synergy between classical machine learning (**Sc
 
 This showcase walks through the user's journey from a blank canvas to actionable, AI-driven insights.
 
-| 1. Initial State                                       | 2. Data Uploaded & Previewed                               |
-| :----------------------------------------------------- | :--------------------------------------------------------- |
-| ![Initial State](images/app_screenshot_0.png)         | ![Data Uploaded](images/app_screenshot_11.png)              |
-| *The user is greeted with a clean interface, ready to upload their dataset.* | *After uploading a CSV file, the app displays a data preview and summary statistics.* |
+| 1. Initial State                                                             | 2. Data Uploaded & Previewed                                                          |
+| :--------------------------------------------------------------------------- | :------------------------------------------------------------------------------------ |
+| ![Initial State](images/app_screenshot_0.webp)                               | ![Data Uploaded](images/app_screenshot_11.webp)                                       |
+| _The user is greeted with a clean interface, ready to upload their dataset._ | _After uploading a CSV file, the app displays a data preview and summary statistics._ |
 
-| 3. Model Trained & Evaluated                           | 4. AI-Powered Insights Generated                             |
-| :----------------------------------------------------- | :--------------------------------------------------------- |
-| ![Model Trained](images/app_screenshot_12.png)          | ![AI Insights Generated](images/app_screenshot_13.png) |
-| *The user trains a model and instantly sees its performance via a classification report and confusion matrix.* | *Finally, Gemini generates a human-readable report, explaining the model's results and offering business advice.* |
+| 3. Model Trained & Evaluated                                                                                   | 4. AI-Powered Insights Generated                                                                                  |
+| :------------------------------------------------------------------------------------------------------------- | :---------------------------------------------------------------------------------------------------------------- |
+| ![Model Trained](images/app_screenshot_12.webp)                                                                | ![AI Insights Generated](images/app_screenshot_13.webp)                                                           |
+| _The user trains a model and instantly sees its performance via a classification report and confusion matrix._ | _Finally, Gemini generates a human-readable report, explaining the model's results and offering business advice._ |
